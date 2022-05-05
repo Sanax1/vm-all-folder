@@ -1,0 +1,19 @@
+package org.sample;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+
+public class Selenium {
+	public static void main(String[] args) {
+		
+	
+	System.setProperty("webdriver.edge.driver", "C:\\Users\\shankar_sanax\\eclipse-workspace\\Test\\driver\\msedgedriver.exe");
+
+	// Start Edge Session
+	WebDriver driver = new EdgeDriver();
+
+	driver.get("https://google.com");
+
+	driver.quit();
+	}
+}

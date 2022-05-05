@@ -1,0 +1,18 @@
+package org.sample;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+
+public class Days7q6 {
+	public static void main(String[] args) {
+		System.setProperty("webdriver.edge.driver",
+				"C:\\\\Users\\\\shankar_sanax\\\\eclipse-workspace\\\\Test\\\\driver\\\\msedgedriver.exe");
+
+		WebDriver d = new EdgeDriver();
+
+		d.get("");
+		d.findElement(By.xpath("//div[@class=\"icon-down icon ich dib icon-down_WO_BAL\"]"));
+
+	}
+}

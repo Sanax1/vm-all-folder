@@ -1,0 +1,38 @@
+package org.sample;
+
+import java.awt.Desktop.Action;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class Days7q6 {
+	public static void main(String[] args) {
+		System.setProperty("webdriver.edge.driver",
+				"C:\\\\Users\\\\shankar_sanax\\\\eclipse-workspace\\\\Test\\\\driver\\\\msedgedriver.exe");
+
+		WebDriver d = new EdgeDriver();
+
+		d.get("https://www.redbus.in/");
+
+		d.manage().window().maximize();
+		WebElement button = d.findElement(By.xpath("//div[@class=\"icon-down icon ich dib icon-down_WO_BAL\"]"));
+			button.click();
+			
+			d.findElement(By.xpath(""));
+		
+		Actions ac=new Actions(d);
+		
+		ac.moveToElement(d.findElement(By.id("signInLink"))).click();
+		
+		
+		
+		
+		
+		
+		
+
+	}
+}

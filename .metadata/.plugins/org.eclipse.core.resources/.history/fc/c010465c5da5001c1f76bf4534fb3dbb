@@ -1,0 +1,31 @@
+package org.day9dropdown;
+
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
+import org.openqa.selenium.By;import org.openqa.selenium.By.ById;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class Q8 extends Q8login {
+	public static void main(String[] args) throws InterruptedException, AWTException {
+		Q8 q=new Q8();
+		WebDriver d = new EdgeDriver();
+		q.login();
+		Select l=new Select(d.findElement(By.id("location")));
+		l.selectByIndex(3);
+		WebElement firstSelectedOption = l.getFirstSelectedOption();
+		String sl = firstSelectedOption.getText();
+		System.err.println(sl);
+		
+		
+		
+		
+		Thread.sleep(2022);
+		d.close();
+
+	}
+}
